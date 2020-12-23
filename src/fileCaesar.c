@@ -3,7 +3,7 @@
 #include <string.h>
 #include "header.h"
 
-#define MAX 10000
+#define MAX_TEXT_LENGTH 10000
 
 void encryptAndDecryptFile()
 {
@@ -51,7 +51,7 @@ void encryptAndDecryptFile()
 void encryptFile()
 {
     FILE *fp_in, *fp_out;
-    char text[MAX];
+    char text[MAX_TEXT_LENGTH];
     int key;
 
     for(;;)
@@ -100,7 +100,7 @@ void encryptFile()
 void decryptFile()
 {
     FILE *fp_in, *fp_out;
-    char text[MAX];
+    char text[MAX_TEXT_LENGTH];
     int key;
 
     for(;;)

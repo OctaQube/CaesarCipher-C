@@ -2,7 +2,7 @@
 #include <string.h>
 #include "header.h"
 
-#define MAX 200
+#define MAX_TEXT_LENGTH 200
 
 void bruteForceCaesar()
 {
@@ -48,7 +48,7 @@ void bruteForceCaesar()
 
 void bruteForceEncrypt()
 {
-    char stringToEncrypt[MAX], outputString[MAX], stringLenght;
+    char stringToEncrypt[MAX_TEXT_LENGTH], outputString[MAX_TEXT_LENGTH], stringLenght;
     int key = 1, index;
 
     for(;;)
@@ -57,7 +57,7 @@ void bruteForceEncrypt()
         scanf("%s", stringToEncrypt);
 
         stringLenght = strlen(stringToEncrypt);
-        if(stringLenght > MAX)
+        if(stringLenght > MAX_TEXT_LENGTH)
         {
             printf("The text is too long!\n");
             readUserInput();
@@ -98,7 +98,7 @@ void bruteForceEncrypt()
 
 void bruteForceDecrypt()
 {
-    char stringToDecrypt[MAX], outputString[MAX], stringLenght;
+    char stringToDecrypt[MAX_TEXT_LENGTH], outputString[MAX_TEXT_LENGTH], stringLenght;
     int key = 1, index;
 
     for(;;)
@@ -107,7 +107,7 @@ void bruteForceDecrypt()
         scanf("%s", stringToDecrypt);
 
         stringLenght = strlen(stringToDecrypt);
-        if(stringLenght > MAX)
+        if(stringLenght > MAX_TEXT_LENGTH)
         {
             printf("The text is too long!\n");
             readUserInput();

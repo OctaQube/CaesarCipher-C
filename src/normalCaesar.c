@@ -2,7 +2,7 @@
 #include <string.h>
 #include "header.h"
 
-#define MAX 200
+#define MAX_TEXT_LENGTH 200
 
 void normalCaesar()
 {
@@ -48,7 +48,7 @@ void normalCaesar()
 
 void encrypt()
 {
-    char stringToEncrypt[MAX], stringLenght;
+    char stringToEncrypt[MAX_TEXT_LENGTH], stringLenght;
     int index, key, i;
 
     for(;;)
@@ -67,7 +67,7 @@ void encrypt()
             printf("Message to encrypt: ");
             scanf("%s", stringToEncrypt);
             stringLenght = strlen(stringToEncrypt);
-            if(stringLenght > MAX)
+            if(stringLenght > MAX_TEXT_LENGTH)
             {
                 printf("The text is too long!\n");
                 readUserInput();
@@ -101,7 +101,7 @@ void encrypt()
 
 void decrypt()
 {
-    char stringToDecrypt[MAX], stringLenght;
+    char stringToDecrypt[MAX_TEXT_LENGTH], stringLenght;
     int index, key, i;
 
     for(;;)
@@ -120,7 +120,7 @@ void decrypt()
             scanf("%s", stringToDecrypt);
 
             stringLenght = strlen(stringToDecrypt);
-            if(stringLenght > MAX)
+            if(stringLenght > MAX_TEXT_LENGTH)
             {
                 printf("The text is too long!\n");
                 readUserInput();
